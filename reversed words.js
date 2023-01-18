@@ -21,3 +21,6 @@ function reverseWords(str){
     let g = f.join(" ");
     return g
   }
+
+
+  console.log(reverseWords('Hello! World'))
