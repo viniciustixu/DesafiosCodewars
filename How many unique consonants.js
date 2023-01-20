@@ -15,12 +15,18 @@ Examples
 "Count my unique consonants!!" ==> 7 */
 
 function countConsonants(str) {
-    let str2 = str.toLowerCase()
-    let x = str2.replace(/[aeioui]/gi, '')
-    let str3 = str.replace(/i/gi, '')
-    let result = [...new Set(str3)].join('')
-
-    return result.length 
-}
+    let emLC = str.toLowerCase()
+    let apenasVogais = emLC.replace(/[^bcdfghjklmnpqrstvwxyz]+/g, "")
+    let result = ''
+    
+    for (let i = 0; i < apenasVogais.length; i++) {
+      if (result.indexOf(apenasVogais[i]) === -1) {
+        result += apenasVogais[i]
+      }
+    }  
+    
+    
+    return result.length
+  }
 
 console.log(countConsonants('abracadabra')) // expect 5
