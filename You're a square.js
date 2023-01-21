@@ -38,3 +38,4 @@ var isSquare = function(n) {
 
   console.log(isSquare(25))
   console.log(isSquare(7))
+  
