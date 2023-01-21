@@ -23,16 +23,18 @@ var isSquare = function(n) {
       return false
     } else if (n == 0) {
       return true
-    } else {
+    } else if (n == 1) {
+      return true
+    }   else {
       for (let i = 0; i < n; i++) {
         if (i * i == n) {return true}
       }  
       
       return false
         
-    }
-    
+    } 
   }
+  
 
   console.log(isSquare(25))
-  console.log(isSquare(21))
+  console.log(isSquare(7))
