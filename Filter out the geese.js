@@ -10,3 +10,19 @@ Your function would return the following array:
 
 ["Mallard", "Hook Bill", "Crested", "Blue Swedish"]
 The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.*/
+
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  let newArr = []
+  
+  
+  for (let i = 0; i < birds.length; i++) {
+    if (geese.indexOf(birds[i]) == -1)
+    newArr.push(birds[i])
+  }
+  console.log(birds)
+  return newArr
+
+};
+
+console.log(gooseFilter(['Hook Bill', 'Steinbacher', 'Mallard', 'Roman Tufted', 'Crested', 'Toulouse', 'Barbary']))
